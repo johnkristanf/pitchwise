@@ -34,6 +34,7 @@ PitchWise is an AI-driven sales practice application for SDRs, AEs, and founders
 ## Code style & conventions
 - **React Router Framework Mode**: Use file routes in `client/app/routes/*.tsx` registered in `client/app/routes.ts`. Never use legacy `<BrowserRouter>`, `<Routes>`, or standalone declarative router components.
 - **Route types**: Always import types from `./+types/<filename>` (e.g., `import type { Route } from "./+types/home";`). Type loaders and components with `Route.LoaderArgs` and `Route.ComponentProps`.
+- **Styling & theme**: The project's main theme is Tailwind's `slate-600` and `white`.
 - **Async everywhere**: All Python database operations, LiveKit communications, and OpenAI calls must use `async`/`await`. Never use blocking sync I/O.
 - **SQLAlchemy 2.0**: Use `select()`, `scalars()`, and `mapped_column()` with `Mapped[T]` type annotations. Never use legacy query API (`session.query()`).
 - **Database sessions**: Always inject DB sessions in FastAPI endpoints via `Depends(get_db)`. Do not instantiate `AsyncSessionLocal()` directly inside endpoints.
