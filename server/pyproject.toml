@@ -1,0 +1,16 @@
+[project]
+name = "server"
+version = "0.1.0"
+description = "FastAPI application"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.162.2",
+    "httpx>=0.28.1",
+    "pydantic-settings>=2.16.2",
+    "pyyaml>=6.0.3",
+    "uvicorn[standard]>=0.54.0",
+]
+
+[tool.uv]
+package = false
