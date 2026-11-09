@@ -27,45 +27,7 @@ Technical founders habitually jump straight into feature monologues and architec
 
 ## 2. Repository Layout & Architecture
 
-PitchWise is structured as a monorepo containing a full-stack client, a Python backend, and OpenSpec specification artifacts:
-
-```
-pitchwise/
-├── client/                     # Full-stack frontend (React Router v7 + Vite)
-│   ├── app/
-│   │   ├── components/         # Reusable UI & route protection components
-│   │   ├── context/            # React Contexts (e.g., AuthContext)
-│   │   ├── lib/                # Client utilities & SDK initializations (e.g., Supabase)
-│   │   ├── routes/             # File-based & configured routes (e.g., home.tsx, login.tsx)
-│   │   ├── root.tsx            # App root layout, HTML shell, and global providers
-│   │   ├── routes.ts           # Route registry (satisfies RouteConfig)
-│   │   └── app.css             # Tailwind CSS imports & theme directives
-│   ├── package.json
-│   ├── react-router.config.ts  # React Router v7 configuration (SSR enabled)
-│   ├── tsconfig.json
-│   └── vite.config.ts          # Vite configuration with Tailwind CSS v4 plugin
-│
-├── server/                     # Backend API & AI orchestration (Python / FastAPI)
-│   ├── config/
-│   │   └── prompts.yaml        # Centralized LLM prompt templates & evaluation rubrics
-│   ├── src/
-│   │   ├── api/
-│   │   │   └── v1/             # Versioned API route handlers
-│   │   ├── core/               # Global configuration, security, logging
-│   │   ├── schemas/            # Pydantic request/response contracts
-│   │   ├── services/           # Business logic, voice agents, and LLM services
-│   │   └── main.py             # FastAPI entrypoint, middleware, and lifecycle
-│   ├── pyproject.toml          # uv project configuration and dependencies
-│   ├── uv.lock
-│   └── README.md
-│
-├── openspec/                   # OpenSpec specifications and in-flight changes
-│   ├── changes/                # In-progress change proposals, designs, and tasks
-│   ├── specs/                  # Durable system capability specifications
-│   └── config.yaml             # OpenSpec project configuration
-│
-└── AGENTS.md                   # This file
-```
+PitchWise is structured as a monorepo containing a full-stack client, a Python backend, and OpenSpec specification artifacts.
 
 ---
 
